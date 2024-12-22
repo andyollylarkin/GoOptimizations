@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: algofast
+BenchmarkFindPairsNestedLoops-11    	     448	   2455018 ns/op	 1589628 B/op	      36 allocs/op
+PASS
+ok  	algofast	1.557s

@@ -1,0 +1,12 @@
+benchmark                            old ns/op      new ns/op     delta
+BenchmarkFindPairsNestedLoops-11     1585701000     2455018       -99.85%
+
+benchmark                            old allocs     new allocs     delta
+BenchmarkFindPairsNestedLoops-11     58             36             -37.93%
+
+benchmark                            old bytes     new bytes     delta
+BenchmarkFindPairsNestedLoops-11     826904248     1589628       -99.81%
+
+Бенчмарк BenchmarkFindPairsNestedLoops-11 работает на 99,85% быстрее в новом файле, чем в старом. Это означает, что время выполнения бенчмарка уменьшилось с 1585701000 наносекунд до 2455018 наносекунд.
+Бенчмарк BenchmarkFindPairsNestedLoops-11 потребляет на 37,93% меньше памяти в новом файле, чем в старом. Это означает, что количество выделений памяти уменьшилось с 58 до 36.
+Бенчмарк BenchmarkFindPairsNestedLoops-11 имеет на 99,81% меньше выделенных данных в новом файле, чем в старом. Это означает, что размер выделенных данных уменьшился с 826904248 байт до 1589628 байт.

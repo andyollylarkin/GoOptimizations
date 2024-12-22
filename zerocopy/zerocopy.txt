@@ -1,0 +1,15 @@
+goos: darwin
+goarch: arm64
+pkg: zerocopy
+BenchmarkCopy-11    	       1	5605010792 ns/op	3000000512 B/op	       1 allocs/op
+BenchmarkCopy-11    	       1	11534292041 ns/op	3000000512 B/op	       1 allocs/op
+BenchmarkCopy-11    	       1	3108808000 ns/op	3000000608 B/op	       2 allocs/op
+BenchmarkCopy-11    	       1	1968170375 ns/op	3000000512 B/op	       1 allocs/op
+BenchmarkCopy-11    	       1	11827236125 ns/op	3000000512 B/op	       1 allocs/op
+BenchmarkCopy-11    	       1	2955397375 ns/op	3000000608 B/op	       2 allocs/op
+BenchmarkCopy-11    	       1	3284119583 ns/op	3000000608 B/op	       2 allocs/op
+BenchmarkCopy-11    	       2	1991385167 ns/op	1500000256 B/op	       0 allocs/op
+BenchmarkCopy-11    	       2	4480623084 ns/op	1500000256 B/op	       0 allocs/op
+BenchmarkCopy-11    	       1	1965525500 ns/op	3000000608 B/op	       2 allocs/op
+PASS
+ok  	zerocopy	151.862s

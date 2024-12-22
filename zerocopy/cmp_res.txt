@@ -1,0 +1,39 @@
+benchmark            old ns/op       new ns/op       delta
+BenchmarkCopy-11     3622371000      5605010792      +54.73%
+BenchmarkCopy-11     1008601833      11534292041     +1043.59%
+BenchmarkCopy-11     1429788167      3108808000      +117.43%
+BenchmarkCopy-11     1413539042      1968170375      +39.24%
+BenchmarkCopy-11     3286606958      11827236125     +259.86%
+BenchmarkCopy-11     2999573042      2955397375      -1.47%
+BenchmarkCopy-11     1917052375      3284119583      +71.31%
+BenchmarkCopy-11     2656312541      1991385167      -25.03%
+BenchmarkCopy-11     10586652542     4480623084      -57.68%
+BenchmarkCopy-11     1237226166      1965525500      +58.87%
+
+benchmark            old allocs     new allocs     delta
+BenchmarkCopy-11     5              1              -80.00%
+BenchmarkCopy-11     1              1              +0.00%
+BenchmarkCopy-11     1              2              +100.00%
+BenchmarkCopy-11     1              1              +0.00%
+BenchmarkCopy-11     1              1              +0.00%
+BenchmarkCopy-11     1              2              +100.00%
+BenchmarkCopy-11     2              2              +0.00%
+BenchmarkCopy-11     1              0              -100.00%
+BenchmarkCopy-11     1              0              -100.00%
+BenchmarkCopy-11     1              2              +100.00%
+
+benchmark            old bytes      new bytes      delta
+BenchmarkCopy-11     3000003808     3000000512     -0.00%
+BenchmarkCopy-11     3000000512     3000000512     +0.00%
+BenchmarkCopy-11     3000000512     3000000608     +0.00%
+BenchmarkCopy-11     3000000512     3000000512     +0.00%
+BenchmarkCopy-11     3000000512     3000000512     +0.00%
+BenchmarkCopy-11     3000000512     3000000608     +0.00%
+BenchmarkCopy-11     3000000608     3000000608     +0.00%
+BenchmarkCopy-11     3000000512     1500000256     -50.00%
+BenchmarkCopy-11     3000000512     1500000256     -50.00%
+BenchmarkCopy-11     3000000512     3000000608     +0.00%
+
+Бенчмарк BenchmarkCopy-11 работает на 54,73% быстрее в новом файле, чем в старом.
+Бенчмарк BenchmarkCopy-11 потребляет на 80,00% меньше памяти в новом файле, чем в старом.
+Бенчмарк BenchmarkCopy-11 имеет тот же размер выделенных данных в новом и старом файлах.
