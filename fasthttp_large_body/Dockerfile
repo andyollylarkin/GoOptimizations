@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN go build -o main main.go
+RUN go build -o main main.go part_reader.go
 
 FROM alpine
 

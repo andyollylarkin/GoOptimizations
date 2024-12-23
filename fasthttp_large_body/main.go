@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"io"
 	"log"
 	"net"
@@ -10,6 +9,7 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/andyollylarkin/chunkreader"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/valyala/fasthttp"
@@ -47,13 +47,15 @@ func handler(ctx *fasthttp.RequestCtx) {
 	var stream io.Reader
 
 	if ctx.Request.IsBodyStream() {
-		stream = ctx.Request.BodyStream()
+		cr := chunkreader.NewChunkReader(ctx.Request.BodyStream(), 5<<20)
+		log.Println("Is body stream")
+
+		stream = cr
 	} else {
-		var bb bytes.Buffer
-
-		stream = &bb
-
-		bb.Write(ctx.Request.Body())
+		stream = &FuncReader{
+			f: ctx.Request.Body,
+		}
+		log.Println("Isnt body stream")
 	}
 
 	_, err = io.Copy(dst, stream)
@@ -63,9 +65,6 @@ func handler(ctx *fasthttp.RequestCtx) {
 
 	ctx.SetStatusCode(200)
 	_, _ = ctx.WriteString("Request processed")
-	defer ctx.SetConnectionClose()
-
-	defer ctx.Response.CloseBodyStream()
 }
 
 func stats() {
@@ -86,7 +85,7 @@ func main() {
 	s := &fasthttp.Server{
 		MaxRequestBodySize: 120 << 20,
 		Handler:            handler,
-		StreamRequestBody:  true,
+		// StreamRequestBody:  true,
 	}
 
 	err := prometheus.Register(alloc)
