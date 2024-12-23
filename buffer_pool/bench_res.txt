@@ -1,0 +1,12 @@
+benchmark                       old ns/op     new ns/op     delta
+BenchmarkFillBuffersPool-11     245949292     137604833     -44.05%
+
+benchmark                       old allocs     new allocs     delta
+BenchmarkFillBuffersPool-11     3001688        1000068        -66.68%
+
+benchmark                       old bytes      new bytes      delta
+BenchmarkFillBuffersPool-11     2585230646     1536006588     -40.59%
+
+- Время выполнения бенчмарка BenchmarkFillBuffersPool-11 уменьшилось на 44,05% в новой версии кода. Это означает, что новая версия кода работает на 44,05% быстрее, чем старая версия.
+- Количество выделений памяти в бенчмарке BenchmarkFillBuffersPool-11 уменьшилось на 66,68% в новой версии кода. Это означает, что новая версия кода требует на 66,68% меньше памяти, чем старая версия.
+- Размер выделенных данных в бенчмарке BenchmarkFillBuffersPool-11 уменьшился на 40,59% в новой версии кода. Это означает, что новая версия кода требует на 40,59% меньше памяти, чем старая версия.

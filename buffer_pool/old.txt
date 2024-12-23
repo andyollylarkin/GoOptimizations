@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: benchpool
+BenchmarkFillBuffersPool-11    	       5	 245949292 ns/op	2585230646 B/op	 3001688 allocs/op
+PASS
+ok  	benchpool	3.553s
