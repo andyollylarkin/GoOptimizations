@@ -24,6 +24,11 @@ func NewChunkReader(readFrom io.Reader, chunkSize int) *ChunkReader {
 func (r *ChunkReader) Read(p []byte) (int, error) {
 	var err error
 
+	// first version -98% performance
+	// return r.from.Read(p)
+	// ---------------------------------
+
+	// second version
 	if r.currentBuffRead <= 0 {
 		r.currentBuffRead, err = io.Copy(r.buffer, io.LimitReader(r.from, int64(r.chunkSize)))
 		if err != nil {

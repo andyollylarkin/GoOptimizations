@@ -88,8 +88,12 @@ func main() {
 	s := &fasthttp.Server{
 		MaxRequestBodySize: 120 << 20,
 		Handler:            handler,
-		// StreamRequestBody:  true,
+		StreamRequestBody:  true,
 	}
+
+	// 100mb body 5mb
+	// 7500 * 5mb
+	// client -> s3 proxy -> cyber protect
 
 	err := prometheus.Register(alloc)
 	if err != nil {

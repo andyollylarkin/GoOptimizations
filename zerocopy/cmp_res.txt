@@ -37,3 +37,14 @@ BenchmarkCopy-11     3000000512     3000000608     +0.00%
 Бенчмарк BenchmarkCopy-11 работает на 54,73% быстрее в новом файле, чем в старом.
 Бенчмарк BenchmarkCopy-11 потребляет на 80,00% меньше памяти в новом файле, чем в старом.
 Бенчмарк BenchmarkCopy-11 имеет тот же размер выделенных данных в новом и старом файлах.
+
+file -> nginx -> client
+-> os buffer -> nginx -> client buffer -> net card
+
+splice()
+---- kernel space----
+file -> client buffer / net card
+
+
+---- kernel space----
+socket -> socket

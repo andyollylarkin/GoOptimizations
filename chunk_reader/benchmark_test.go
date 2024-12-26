@@ -20,7 +20,7 @@ func BenchmarkChunkReader(b *testing.B) {
 	defer os.Remove("./dst_file.bin")
 
 	for i := 0; i < b.N; i++ {
-		cr := chunkreader.NewChunkReader(f, 5<<20)
+		cr := chunkreader.NewChunkReader(f, 100<<10)
 		_, err := io.Copy(outF, cr)
 		if err != nil {
 			b.Fatal(err)

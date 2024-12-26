@@ -1,0 +1,8 @@
+benchmark                   old ns/op     new ns/op     delta
+BenchmarkChunkReader-11     2311          2182          -5.58%
+
+benchmark                   old allocs     new allocs     delta
+BenchmarkChunkReader-11     6              6              +0.00%
+
+benchmark                   old bytes     new bytes     delta
+BenchmarkChunkReader-11     33409         33408         -0.00%

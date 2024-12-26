@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: chunkreader
+BenchmarkChunkReader-11    	  528153	      2182 ns/op	   33408 B/op	       6 allocs/op
+PASS
+ok  	chunkreader	2.116s
