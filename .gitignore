@@ -1,3 +1,6 @@
 100mb_file*
 *bin
 lorem.txt
+.pgdata
+file_dst
+dst_file

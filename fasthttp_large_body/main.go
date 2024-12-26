@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net"
@@ -45,6 +46,8 @@ func handler(ctx *fasthttp.RequestCtx) {
 	}
 
 	var stream io.Reader
+
+	fmt.Println("Content_Length: ", ctx.Request.Header.ContentLength())
 
 	if ctx.Request.IsBodyStream() {
 		cr := chunkreader.NewChunkReader(ctx.Request.BodyStream(), 5<<20)
