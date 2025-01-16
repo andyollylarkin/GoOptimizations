@@ -1,0 +1,6 @@
+goos: darwin
+goarch: arm64
+pkg: typecast
+BenchmarkSliceToString-11    	      52	  23557659 ns/op	1000005657 B/op	       1 allocs/op
+PASS
+ok  	typecast	7.015s
