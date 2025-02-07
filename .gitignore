@@ -4,3 +4,10 @@ lorem.txt
 .pgdata
 file_dst
 dst_file
+
+.vscode
+.idea
+node_modules
+
+*bin
+*data
